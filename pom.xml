@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.buildsecurity</groupId>
-	<artifactId>spring_keycloak.demo</artifactId>
+	<artifactId>cypress.demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring_keycloak.demo</name>
-	<description>Demo project for Spring Boot Security Integration testing with spring_keycloak</description>
+	<name>cypress.demo</name>
+	<description>Demo project for Spring Boot Security Integration testing with cypress</description>
 	<properties>
 		<java.version>11</java.version>
 		<keycloak-adapter-bom.version>16.1.1</keycloak-adapter-bom.version>

@@ -1,11 +1,11 @@
 {
-    "realm": "spring_keycloak-testing-realm",
+    "realm": "cypress-testing-realm",
     "enabled": true,
     "sslRequired": "external",
     "clients": [
       {
         "id": "1f85638f-09cd-4e56-b019-c3a39382105f",
-        "clientId": "spring_keycloak-test-client",
+        "clientId": "cypress-test-client",
         "enabled": true,
         "clientAuthenticatorType": "client-secret",
         "secret": "fa611bc9-8a29-4f3d-89f5-da4d021c556d",
@@ -22,7 +22,7 @@
     ],
     "roles": {
       "client": {
-        "spring_keycloak-test-client": [
+        "cypress-test-client": [
           {
             "id": "26f19b9f-81af-40f8-ac07-5fb8dbaeaadc",
             "name": "Reader",
@@ -50,7 +50,7 @@
           }
         ],
         "clientRoles": {
-          "spring_keycloak-test-client": [
+          "cypress-test-client": [
             "Reader"
           ]
         }
@@ -66,7 +66,7 @@
           }
         ],
         "clientRoles": {
-          "spring_keycloak-test-client": [
+          "cypress-test-client": [
             "Reader",
             "Writer"
           ]
