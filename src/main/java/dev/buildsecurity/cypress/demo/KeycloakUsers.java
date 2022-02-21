@@ -1,4 +1,4 @@
-package dev.buildsecurity.cypress_spring.demo;
+package dev.buildsecurity.cypress.demo;
 
 import java.util.HashMap;
 import java.util.Map;

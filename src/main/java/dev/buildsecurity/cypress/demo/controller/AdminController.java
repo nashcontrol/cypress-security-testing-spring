@@ -1,4 +1,4 @@
-package dev.buildsecurity.cypress_spring.demo.controller;
+package dev.buildsecurity.cypress.demo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

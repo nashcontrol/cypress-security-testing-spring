@@ -1,4 +1,4 @@
-package dev.buildsecurity.cypress_spring.demo;
+package dev.buildsecurity.cypress.demo;
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootProperties;
 import org.springframework.boot.SpringApplication;
