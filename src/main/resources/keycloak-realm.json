@@ -1,0 +1,76 @@
+{
+    "realm": "spring_keycloak-testing-realm",
+    "enabled": true,
+    "sslRequired": "external",
+    "clients": [
+      {
+        "id": "1f85638f-09cd-4e56-b019-c3a39382105f",
+        "clientId": "spring_keycloak-test-client",
+        "enabled": true,
+        "clientAuthenticatorType": "client-secret",
+        "secret": "fa611bc9-8a29-4f3d-89f5-da4d021c556d",
+        "redirectUris": [
+          "http://localhost:8000/sso/login"
+        ],
+        "bearerOnly": false,
+        "directAccessGrantsEnabled": true,
+        "serviceAccountsEnabled": true,
+        "publicClient": true,
+        "protocol": "openid-connect",
+        "fullScopeAllowed": true
+      }
+    ],
+    "roles": {
+      "client": {
+        "spring_keycloak-test-client": [
+          {
+            "id": "26f19b9f-81af-40f8-ac07-5fb8dbaeaadc",
+            "name": "Reader",
+            "clientRole": true,
+            "containerId": "1f85638f-09cd-4e56-b019-c3a39382105f"
+          },
+          {
+            "id": "82538f6f-4a08-44b7-ba5f-a7a4d899540f",
+            "name": "Writer",
+            "clientRole": true,
+            "containerId": "1f85638f-09cd-4e56-b019-c3a39382105f"
+          }
+        ]
+      }
+    },
+    "users": [
+      {
+        "id": "e967466a-0d57-446a-969a-ade1cdad6e30",
+        "username": "test",
+        "enabled": true,
+        "credentials": [
+          {
+            "type": "password",
+            "value": "pass"
+          }
+        ],
+        "clientRoles": {
+          "spring_keycloak-test-client": [
+            "Reader"
+          ]
+        }
+      },
+      {
+        "id": "0791fc42-f13f-4031-a352-dc80fa75961e",
+        "username": "admin",
+        "enabled": true,
+        "credentials": [
+          {
+            "type": "password",
+            "value": "complexpass"
+          }
+        ],
+        "clientRoles": {
+          "spring_keycloak-test-client": [
+            "Reader",
+            "Writer"
+          ]
+        }
+      }
+    ]
+  }
