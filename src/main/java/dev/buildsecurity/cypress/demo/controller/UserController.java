@@ -15,9 +15,9 @@ public class UserController {
 
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    @RequestMapping(value = "/anonymous", method = RequestMethod.GET)
-    public ResponseEntity<String> getAnonymous() {
-        return ResponseEntity.ok("Hello Anonymous user");
+    @RequestMapping(value = "/health", method = RequestMethod.GET)
+    public ResponseEntity<String> getHealth() {
+        return ResponseEntity.ok("Alive!");
     }
 
     @PreAuthorize("hasRole('Reader')")

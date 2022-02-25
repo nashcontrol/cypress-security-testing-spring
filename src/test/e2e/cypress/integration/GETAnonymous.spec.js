@@ -1,5 +1,5 @@
 
-describe('User api', () => {
+describe('Unauthenticated User api', () => {
     context('GET /api/user/anonymous', () => {
         it('should return a hello anonymous response', () => {
             cy.request({

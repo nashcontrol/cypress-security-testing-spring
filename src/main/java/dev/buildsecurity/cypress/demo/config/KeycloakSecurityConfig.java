@@ -40,7 +40,7 @@ public class KeycloakSecurityConfig extends KeycloakWebSecurityConfigurerAdapter
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/api/anonymous").permitAll()
+                .antMatchers("/api/user/health").permitAll()
                 .antMatchers("/api/**").authenticated()
                 .anyRequest().denyAll().and()
                 .oauth2ResourceServer().jwt();
