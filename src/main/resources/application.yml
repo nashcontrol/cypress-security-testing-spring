@@ -1,7 +1,7 @@
 keycloak:
   auth-server-url: ${embedded.keycloak.auth-server-url}
-  realm: cypress-testing-realm
-  resource: cypress-test-client
+  realm: testing-realm
+  resource: testing-client
   use-resource-role-mappings: true
   ssl-required: external
   public-client: true
@@ -12,7 +12,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: ${embedded.keycloak.auth-server-url}/realms/cypress-testing-realm/protocol/openid-connect/certs
+          jwk-set-uri: ${embedded.keycloak.auth-server-url}/realms/testing-realm/protocol/openid-connect/certs
 
 server.forward-headers-strategy: FRAMEWORK
 server.port: 8000

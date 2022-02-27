@@ -1,22 +1,22 @@
-describe('Authenticated User api', () => {
+describe('Authenticated Admin api', () => {
     before(() => {
         cy.login('user'); 
      });
-    context('Login and GET /api/user/me', () => {
-        it('should allow api access for all authenticated users', () => {
+    context('Login and GET /api/admin/me', () => {
+        it('should not allow api access for authenticated users not an admin', () => {
             const token = Cypress.env('token');
             const authorization = `bearer ${ token }`;
 
             cy.request({
                 method: 'GET',
-                url: 'api/user/me',
+                url: 'api/admin/me',
                 headers:{
                     authorization:authorization,
-                  }
+                  },
+                failOnStatusCode: false
             })
             .should((response) => {
-                expect(response.status).to.eq(200)
-                expect(response.body).eq('Hello test')
+                expect(response.status).to.eq(403)
             });
         });
     });
